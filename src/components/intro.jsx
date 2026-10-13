@@ -3,7 +3,7 @@ import Corners from "./corners";
 import { profile } from "../data/siteData";
 
 const PLAY_MS = 4800; // how long the intro plays before the portal opens
-const EXIT_MS = 1100; // how long the portal-opening takes
+const EXIT_MS = 4100; // how long the portal-opening takes
 
 const COLORS = ["#ffffff", "#ffe9a8", "#ffc6e3", "#c9d2ff"];
 
