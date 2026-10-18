@@ -691,46 +691,136 @@ p { max-width: 62ch; }
 /* 
    SITE POPS IN WHEN THE PORTAL OPENS
  */
-.app .starfield { opacity: 0; transition: opacity 1.8s ease 0.3s; }
-.app.ready .starfield { opacity: 1; }
+
+.app .starfield {
+  opacity: 0;
+  transition: opacity 1.2s ease 0.15s;
+  will-change: opacity;
+}
+
+.app.ready .starfield {
+  opacity: 1;
+}
 
 .app:not(.ready) .topbar,
 .app:not(.ready) .orb,
-.app:not(.ready) .hero-text > * { opacity: 0; }
+.app:not(.ready) .hero-text > * {
+  opacity: 0;
+}
 
-.app.ready .topbar { animation: dropin 0.9s cubic-bezier(0.2, 0.9, 0.3, 1) 0.3s both; }
-@keyframes dropin { from { opacity: 0; translate: 0 -100%; } to { opacity: 1; translate: 0 0; } }
 
-.app.ready .hero-text > * { animation: heroin 1s cubic-bezier(0.2, 0.9, 0.3, 1.1) both; }
-.app.ready .hero-text > :nth-child(1) { animation-delay: 0.25s; }
-.app.ready .hero-text > :nth-child(2) { animation-delay: 0.4s; }
-.app.ready .hero-text > :nth-child(3) { animation-delay: 0.55s; }
-.app.ready .hero-text > :nth-child(4) { animation-delay: 0.7s; }
-.app.ready .hero-text > :nth-child(5) { animation-delay: 0.85s; }
+.app.ready .topbar {
+  animation: dropin 0.75s cubic-bezier(0.22, 1, 0.36, 1) 0.15s both;
+}
+
+@keyframes dropin {
+  from {
+    opacity: 0;
+    transform: translate3d(0, -24px, 0);
+  }
+  to {
+    opacity: 1;
+    transform: translate3d(0, 0, 0);
+  }
+}
+
+
+.app.ready .hero-text > * {
+  animation: heroin 0.75s cubic-bezier(0.22, 1, 0.36, 1) both;
+}
+
+.app.ready .hero-text > :nth-child(1) { animation-delay: 0.12s; }
+.app.ready .hero-text > :nth-child(2) { animation-delay: 0.22s; }
+.app.ready .hero-text > :nth-child(3) { animation-delay: 0.32s; }
+.app.ready .hero-text > :nth-child(4) { animation-delay: 0.42s; }
+.app.ready .hero-text > :nth-child(5) { animation-delay: 0.52s; }
+
 @keyframes heroin {
-  from { opacity: 0; translate: 0 40px; scale: 0.9; filter: blur(8px); }
-  to { opacity: 1; translate: 0 0; scale: 1; filter: blur(0); }
+  from {
+    opacity: 0;
+    transform: translate3d(0, 22px, 0) scale(0.98);
+  }
+  to {
+    opacity: 1;
+    transform: translate3d(0, 0, 0) scale(1);
+  }
 }
 
+/* Celestial orbs: preserve the floating effect */
 .app.ready .sun {
-  animation: float 9s ease-in-out infinite, orbpop 1.5s cubic-bezier(0.2, 1.5, 0.3, 1) 0.2s both;
+  animation:
+    float 9s ease-in-out infinite,
+    orbpop 0.9s cubic-bezier(0.22, 1, 0.36, 1) 0.1s both;
 }
-.app.ready .moon {
-  animation: float 11s ease-in-out infinite reverse, sway 8s ease-in-out infinite,
-             moonglow 5s ease-in-out infinite, orbpop 1.5s cubic-bezier(0.2, 1.5, 0.3, 1) 0.45s both;
-}
-@keyframes orbpop { from { scale: 0; opacity: 0; } to { scale: 1; opacity: 1; } }
 
-@media (max-width: 760px) {
-  .corners:not(.intense) .corner-left { display: none; }
-  .intro .eq { height: 70px; }
+.app.ready .moon {
+  animation:
+    float 11s ease-in-out infinite reverse,
+    sway 8s ease-in-out infinite,
+    moonglow 5s ease-in-out infinite,
+    orbpop 0.9s cubic-bezier(0.22, 1, 0.36, 1) 0.25s both;
 }
+
+@keyframes orbpop {
+  from {
+    transform: scale(0.88);
+    opacity: 0;
+  }
+  to {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+/* Mobile performance improvements */
+@media (max-width: 760px) {
+  .corners:not(.intense) .corner-left {
+    display: none;
+  }
+
+  .intro .eq {
+    height: 70px;
+  }
+
+  .app.ready .hero-text > * {
+    animation-duration: 0.6s;
+  }
+
+  .app.ready .topbar {
+    animation-duration: 0.6s;
+  }
+}
+
+/* Respect accessibility settings */
 @media (prefers-reduced-motion: reduce) {
-  .corner-left, .corner-right, .wave, .stage-glow, .eq i { animation: none; }
-  .note, .wave { display: none; }
-  .eq i { transform: scaleY(0.5); }
-  .app.ready .topbar, .app.ready .hero-text > * { animation: none; }
-  .app.ready .sun, .app.ready .moon { animation: none; opacity: 1; }
+  .corner-left,
+  .corner-right,
+  .wave,
+  .stage-glow,
+  .eq i {
+    animation: none !important;
+  }
+
+  .note,
+  .wave {
+    display: none !important;
+  }
+
+  .eq i {
+    transform: scaleY(0.5);
+  }
+
+  .app .starfield {
+    transition: none;
+  }
+
+  .app.ready .topbar,
+  .app.ready .hero-text > *,
+  .app.ready .sun,
+  .app.ready .moon {
+    animation: none !important;
+    opacity: 1;
+  }
 }
 
 /* 
