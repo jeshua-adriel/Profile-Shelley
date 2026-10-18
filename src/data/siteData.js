@@ -48,7 +48,7 @@ export const accomplishments = [
 
 
 export const bands = [
-  { name: "Moon Serenade", role: "Female Vocalist", years: "2023 – present", about: "Moon Serenade is a 5-Man live band at Moonbucks Cafe at Calamba Cit, Come and visit us at 7:00pm every sunday to experience every performance to life with soulful vocals, captivating melodies, and music that creates unforgettable moments.", url: "https://www.facebook.com/profile.php?id=61565960122733" },
+  { name: "Moon Serenade", role: "Female Vocalist", years: "2023 – present", about: "Moon Serenade is a dynamic five-man live band performing at Moonbucks Cafe in Calamba City, bringing soulful vocals, captivating melodies, and vibrant rhythms to every performance. Join us every Sunday at 7:00 PM and experience an unforgettable evening filled with music, passion, and moments.", url: "https://www.facebook.com/profile.php?id=61565960122733" },
   { name: "Echo Vibes", role: "Lead Vocalist", years: "2025 – present", about: "Echo Vibes is a dynamic musical trio featuring a pianist, drummer, and saxophonist, creating a captivating blend of melodies, rhythms, and soulful sounds. As the vocalist, Echo Vibes brings each performance to life with their expressive music and passion for the stage.", url: "https://www.facebook.com/share/1Bq63kcADN/" },
 ];
 
@@ -56,12 +56,11 @@ export const bands = [
 export const contact = {
   email: "booking@example.com", // TODO
   phone: "+63 900 000 0000",    // TODO
-  manager: "TODO: Manager or agency name",
   socials: [
-    { label: "Instagram", url: "https://instagram.com" },
-    { label: "Facebook", url: "https://facebook.com" },
-    { label: "TikTok", url: "https://tiktok.com" },
-    { label: "YouTube", url: "https://youtube.com" },
+    { label: "Instagram", url: "https://www.instagram.com/shelleymarguuu_/" },
+    { label: "Facebook", url: "https://web.facebook.com/profile.php?id=61562971867074" },
+    { label: "TikTok", url: "https://www.tiktok.com/@smargaux_" },
+    { label: "YouTube", url: "https://www.youtube.com/@shelley_margaux" },
   ],
 };
 

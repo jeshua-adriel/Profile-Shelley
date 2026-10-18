@@ -850,7 +850,7 @@ body, .app { overflow-x: clip; }
   padding-left: max(clamp(1rem, 4vw, 3rem), env(safe-area-inset-left, 0px));
   padding-right: max(clamp(1rem, 4vw, 3rem), env(safe-area-inset-right, 0px));
 }
-.footer { padding-bottom: calc(3rem + env(safe-area-inset-bottom, 0px)); }
+.footer { padding-bottom: calc(3rem + env(safe-area-inset-bottom, 0px)); display: flex; justify-content: center;}
 .eq { bottom: calc(1.2rem + env(safe-area-inset-bottom, 0px)); }
 
 /* Tablet */

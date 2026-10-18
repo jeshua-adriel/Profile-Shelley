@@ -202,7 +202,6 @@ export default function App() {
               <p className="lead">For bookings, collaborations, and events.</p>
               <p><a href={`mailto:${contact.email}`}>{contact.email}</a></p>
               <p><a href={`tel:${contact.phone.replace(/\s/g, "")}`}>{contact.phone}</a></p>
-              <p>Management: {contact.manager}</p>
             </div>
             <div className="platforms">
               {contact.socials.map((s) => (
