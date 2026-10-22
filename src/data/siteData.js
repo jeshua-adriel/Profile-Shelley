@@ -42,6 +42,15 @@ export const accomplishments = [
   { year: "2022", title: "Alaminos Idol Season 1 (Finalist)", detail: "Competed in Alaminos Idol Season 1 in 2022, showcasing vocal talent and earning a place among the competition's finalists." },
 ];
 
+export const accomplishmentPhotos = [
+  { src: "/acc-slcuaa.jpg",   alt: "SLCUAA 25th Season Vocal Duet Champions", caption: "SLCUAA 2025 Duet Champions" },
+  { src: "/acc-mitl12.jpg",   alt: "MITL 12th Battle of the Bands with OPTIMA", caption: "MITL 12th, Back-to-Back Champions" },
+  { src: "/acc-mitl11.jpg",   alt: "MITL 11th Battle of the Bands with OPTIMA", caption: "MITL 11th Champions" },
+  { src: "/acc-idol.png",     alt: "Alaminos Idol Season 1", caption: "Alaminos Idol Finalist" },
+  { src: "/acc-moonserenade.jpg", alt: "Performing with Moon Serenade", caption: "Moon Serenade" },
+  { src: "/acc-echovibes.jpg",    alt: "Performing with Echo Vibes", caption: "Echo Vibes" },
+]
+
 
 export const bands = [
   { name: "Moon Serenade", role: "Female Vocalist", years: "2023 – present", about: "Moon Serenade is a dynamic five-man live band performing at Moonbucks Cafe in Calamba City, bringing soulful vocals, captivating melodies, and vibrant rhythms to every performance. Join us every Sunday at 7:00 PM and experience an unforgettable evening filled with music, passion, and moments.", url: "https://www.facebook.com/profile.php?id=61565960122733" },

@@ -4,7 +4,8 @@ import Corners from "./components/corners";
 import StarField from "./components/starField";
 import Section from "./components/section";
 import Portrait from "./components/portrait";
-import { profile, press, music, accomplishments, bands, contact, heroImages } from "./data/siteData";
+import PhotoOrbs from "./components/photoorbs";
+import { profile, press, music, accomplishments, accomplishmentPhotos, bands, contact, heroImages } from "./data/siteData";
 import "./App.css";
 
 const nav = [
@@ -97,7 +98,7 @@ export default function App() {
         </Section>
 
         <Section id="press" title="In the zone">
-          <p className="lead">Special highlights of events, gigs, and competitions.</p>
+          <p className="press-lead">Special highlights of events, gigs, and competitions.</p>
           <ul className="link-list">
             {press.map((item, i) => (
               <li key={i}>
@@ -149,17 +150,20 @@ export default function App() {
         </Section>
 
         <Section id="achievements" title="Accomplishments">
-          <ol className="timeline">
-            {accomplishments.map((a, i) => (
-              <li key={i}>
-                <span className="year">{a.year}</span>
-                <div>
-                  <h3>{a.title}</h3>
-                  <p>{a.detail}</p>
-                </div>
-              </li>
-            ))}
-          </ol>
+          <div className="achievements">
+            <ol className="timeline">
+              {accomplishments.map((a, i) => (
+                <li key={i}>
+                  <span className="year">{a.year}</span>
+                  <div>
+                    <h3>{a.title}</h3>
+                    <p>{a.detail}</p>
+                  </div>
+                </li>
+              ))}
+            </ol>
+            <PhotoOrbs photos = {accomplishmentPhotos}/>
+          </div>
         </Section>
 
         <Section id="bands" title="Bands">
