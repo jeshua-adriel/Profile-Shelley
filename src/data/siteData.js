@@ -59,7 +59,7 @@ export const bands = [
 
 
 export const contact = {
-  email: "shelleymargauxreye@gmail.com", // TODO
+  email: "shelleymargauxreyes@gmail.com", // TODO
   phone: "+63 994-728-8966",    // TODO
   socials: [
     { label: "Instagram", url: "https://www.instagram.com/shelleymarguuu_/" },
