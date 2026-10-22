@@ -35,6 +35,7 @@ export default function App() {
       {ready && <Corners />}
       <StarField />
 
+
       <header className={`topbar${menuOpen ? " menu-open" : ""}`}>
         <a href="#top" className="brand">{profile.name}</a>
         <button
@@ -116,7 +117,7 @@ export default function App() {
 
           <div className="music-grid">
             <div>
-              <h3>Favourite Songs</h3>
+              <h3>Songs that I can sing</h3>
               <ol className="tracks">
                 {music.tracks.map((t, i) => (
                   <li key={i}>
@@ -131,7 +132,7 @@ export default function App() {
             </div>
 
             <div>
-              <h3>Play it here</h3>
+              <h3>More songs here</h3>
               {music.spotifyPlaylistId ? (
                 <iframe
                   title="Shelley's Spotify playlist"
@@ -143,11 +144,6 @@ export default function App() {
               ) : (
                 <p className="empty">Add her Spotify playlist ID in siteData.js to show a player here.</p>
               )}
-              <div className="platforms">
-                {music.platforms.map((p) => (
-                  <a key={p.label} className="btn" href={p.url} target="_blank" rel="noreferrer">{p.label}</a>
-                ))}
-              </div>
             </div>
           </div>
         </Section>
