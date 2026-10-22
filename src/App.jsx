@@ -137,8 +137,8 @@ export default function App() {
                 <iframe
                   title="Shelley's Spotify playlist"
                   className="player"
-                  src={`https://open.spotify.com/embed/playlist/${music.spotifyPlaylistId}`}
-                  allow="encrypted-media"
+                  src={`https://open.spotify.com/embed/playlist/${music.spotifyPlaylistId}?utm_source=generator&theme=0`}
+                  allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
                   loading="lazy"
                 />
               ) : (
